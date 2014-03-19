@@ -1,0 +1,461 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta charset="UTF-8">
+		<title>
+		Facturación
+		</title>
+    <link href="content/invoice.css" type="text/css" rel="stylesheet" />
+    <link rel="SHORTCUT ICON" href="https://cdnpt.com/favicon2.ico" />
+    <link href='https://www.pricetravel.com.mx/css/master.css?v=40598' rel='stylesheet' type='text/css' />
+    <link href='https://www.priceres.com.mx/cdn/affiliates/general/css/general.css?v=40598' rel='stylesheet' type='text/css' />
+    <link href='https://www.pricetravel.com.mx/css/package.css?v=40598' rel='stylesheet' type='text/css' />
+    <link href='https://cdnpt.com/cssshared/bootstrap.css?v=40598' rel='stylesheet' type='text/css' />
+    <script type='text/javascript' src='https://www.pricetravel.com.mx/js/globals.js?v='></script>
+    <script type='text/javascript' src='https://www.pricetravel.com.mx/Scripts/jquery-1.7.2.min.js?v='></script>
+    <link href='https://www.pricetravel.com.mx/css/headerPTV2.css?v=40598' rel='stylesheet' type='text/css' />
+    <link href='https://cdnpt.com/cssshared/spritespt.css?v=40598' rel='stylesheet' type='text/css' />    
+   <link rel="stylesheet" type="text/css" href="https://www.priceres.com.mx/cdn/affiliates/({affiliateSiteURI})/css/custom.css" />
+</head>
+<body >
+<script type="text/javascript">
+   function hideSplash()
+   {
+      document.getElementById('splash').style.display = 'none';
+      document.getElementById('splashContent').style.display = '';
+   }
+   
+   function showSplash()
+   {
+      document.getElementById('splash').style.display='';
+      document.getElementById('splashContent').style.display='none';
+      setInterval("showDotsSplash()", 70);
+   }
+</script>
+<center>
+   <div id="splash" style="color: #3366AA; left: 0px; width: 100%; display:none" >
+      <img style="margin: 0 0 70px 0;" src="https://cdnpt.com/images/L2/logosplash2.gif" alt="PriceTravel" />
+      <h1>
+         Estamos procesando tu solicitud
+         <span id="dotsSplash" style="position: absolute; display:"></span>
+      </h1>
+      
+      <img id="aniSpl" style="display:none" src="https://cdnpt.com/images/splashv4.gif" alt="..." />
+      <script type="text/javascript">
+         var iDot = 1
+         
+         function showDotsSplash()
+         {
+            if (iDot>7)
+            {
+               iDot = 0;
+               document.getElementById('dotsSplash').innerHTML = "";
+            }
+            
+            document.getElementById('dotsSplash').innerHTML = document.getElementById('dotsSplash').innerHTML + ".";
+            iDot+=1;
+         }
+      </script>
+      <h2>
+         01 (800) 570-0988
+      </h2>
+      <h4 class="higLit">
+         Llámanos sin costo desde México</h4>
+   </div>
+</center>
+   <div id="splashContent">
+      <div id="divRoomQuoted" style="position: absolute; display: none; left: 526px; z-index: 2;" onmouseout="javascript:hidePopup();">
+      </div>
+      <div id="container2"> 
+  	 	  <div id="header" class="group mSprite">
+      
+      <div class="fxwidth group">
+         
+         <h2 id="logo">
+            <a href="https://www.pricetravel.com.mx/">
+               <img class="hlogoMX mSprite" src="https://cdnpt.com/images/1px.gif" alt="PriceTravel - reserva tu viaje" /></a></h2>
+
+         <!--Botón de idioma / telefonos-->
+         <div id="phoneToggler" class="phone-lang-toggle fl">
+            <a href="#" id="phoneLang-toggle" class="btn dropdown dropdown">
+               <img width="16" height="11" src="https://cdnpt.com/images/1px.gif" class="mx mSprite">
+               México - 01 (800) 570-0988
+               <img src="https://cdnpt.com/images/1px.gif" class="mSprite pointD">
+            </a>
+            <div class="dropdown-menu" id="phone-lang" style="display: none;">
+               <div class="halfWidth" id="lang-selector">
+                  <ul class="ptSites" id="ptSites"><li><b class="caps caps-title">PriceTravel en otros países</b></li><li><a href="http://www.pricetravel.com/ncr"><img width="16" height="11" src="https://cdnpt.com/images/1px.gif" class="us mSprite" />&nbsp;Estados Unidos <span class="note">PriceTravel.com</span></a></li><li><a href="http://www.pricetravel.com.ar/"><img width="16" height="11" src="https://cdnpt.com/images/1px.gif" class="ar mSprite" />&nbsp;Argentina <span class="note">PriceTravel.com.ar</span></a></li><li><a href="http://www.pricetravel.co/"><img width="16" height="11" src="https://cdnpt.com/images/1px.gif" class="co mSprite" />&nbsp;Colombia <span class="note">PriceTravel.co</span></a></li></ul>
+               </div>
+               <div class="halfWidth" id="sitephones">
+                  <ul><li class="main-phone"><b class="caps caps-tittle">LLAMA GRATIS DESDE MÉXICO </b><br><strong>01 (800) 570-0988</strong><br><span class="note">Lun a Dom: 24hrs, los 365 días del año</span></li><li class="divider">Llama desde otros países</li><li><b class="caps">Argentina</b><div class="phones">0800-666-1181</div></li><li><b class="caps">Colombia</b><div class="phones">01 (800) 752-2250</div></li><li><b class="caps">Estados Unidos</b><div class="phones">1 (800) 231-9820</div></li><li class="divider"></li><li><b class="caps">Fuera de México</b><div class="phones">+52 (998) 881-2486</div></li></ul>
+               </div>
+            </div>
+         </div>
+         <!--/Botón de idioma / telefonos-->
+         <!--Links del header-->
+         <ul id="globallinks">
+          
+
+            <li id="ptsLink1" ><a href="https://www.pricetravel.com.mx/puntos-de-atencion">
+                                                Puntos de Atención
+                                             </a> |</li>
+            <li><a href="https://www.pricetravel.com.mx/ayuda/consultar-itinerario">
+               Consulta tu itinerario</a>|</li>
+            <li><a href="https://www.pricetravel.com.mx/ayuda">
+               Ayuda</a>|</li>
+             
+            <li id="createAccountLink">
+               <a href="https://www.pricetravel.com.mx/clientes/crear?hv=1.1">Crea tu cuenta </a>| 
+            </li>
+              
+            <li id="liCustomerLogged" class="dropdown" style="display: none">
+               <a onclick="javascript:toggleUserOpts();return false;" href="#userOpts"><span id="customerFullName">
+                  </span><img
+                     src="https://cdnpt.com/images/1px.gif" class="mSprite pointD">
+               </a>
+               <ul id="userOpts" class="dropdown-menu">
+                  <li class="accountLink"><a href="https://www.pricetravel.com.mx/clientes">
+                     Ir a tu cuenta</a></li>
+                  <li class="configurationLink"><a href="https://www.pricetravel.com.mx/clientes/reservaciones">
+                     Reservaciones</a></li>
+                  <li class="signoutLink"><a href="javascript:logoutCustomer()">
+                     Cerrar sesión</a></li>
+               </ul>
+            </li>
+            <li id="liCustomerNotLogged" class="dropdown" style="display: ">
+                <a href="javascript:openLoginBox()">
+                  Iniciar sesión</a>
+               <div style="display: none" id="loginBox" class="dropdown-menu pull-right">
+                  <iframe id="iLogin" width="100%" scrolling="no" height="330" frameborder="0"></iframe>
+                  <iframe id="iLogout" width="0" scrolling="no" height="0" frameborder="0" style="display: none">
+                  </iframe>
+               </div>
+            </li>
+            
+           
+         </ul>
+         <!--/Links del header-->
+      </div>
+      
+
+      <div id="navWrap">
+         <ul id="globalnav" class="group">
+            <li id="4_tabHotels1"><a href="https://www.pricetravel.com.mx/" id="4_lnkHotels1" class="mSprite">Hoteles</a>
+            </li>
+            <li id="4_tabPackages1"><a href="https://www.pricetravel.com.mx/paquetes" id="4_lnkPackages1" class="mSprite">Paquetes</a>
+            </li>
+            <li id="4_tabFlights1"><a href="https://www.pricetravel.com.mx/vuelos" id="4_lnkFlights1" class="mSprite">Vuelos</a>
+            </li>
+            <li id="4_tabTransfers1"><a href="https://www.pricetravel.com.mx/traslados" id="4_lnkTransfers1" class="mSprite">Traslados</a></li>
+            <li id="4_tabActivities1"><a href="https://www.pricetravel.com.mx/tours/" id="4_lnkActivities1" class="mSprite">Tours</a></li>
+            <li id="4_tabCars1"><a href="https://www.pricetravel.com.mx/autos" id="4_lnkCars1" class="mSprite">Autos</a>
+            </li>
+            <li id="4_tabBuses1"><a href="https://www.pricetravel.com.mx/autobuses" id="4_lnkBuses1" class="mSprite">Autobuses</a>
+            </li>
+            <li id="4_tabCruises1"><a href="https://www.pricetravel.com.mx/cruceros" id="4_lnkCruises1" class="mSprite">Cruceros</a>
+            </li>
+            
+            <li id="4_tabDeals1"><a href="https://www.pricetravel.com.mx/travel-deals/" id="4_lnkDeals1" class="mSprite">Ofertas</a>
+            </li>
+            <li id="4_tabGroups1"><a href="https://www.pricetravel.com.mx/grupos/informacion-grupo" id="4_lnkGroups1" class="mSprite">Grupos</a>
+            </li>
+            <li id="header1_tabSearch">
+               <form action='https://www.pricetravel.com.mx/search' method='get'>
+               <div id="globalsearch">
+                  <input type="text" name="q" id="q" size="50" maxlength="70" title="Buscar en PriceTravel" value="" onkeypress="validateKey(event)" placeholder="Buscar" />
+                  <input type="submit" name="busGlo" id="busGlo" class="mSprite" value="Buscar" /></div>
+               </form>
+            </li>
+         </ul>
+      </div>
+     
+   </div>
+	  		<div id="social-box">
+      <div class="social-compact">
+         <img src="https://cdnpt.com/images/1px.gif" alt="PriceTravel en Facebook" class="fb mSprite" />
+         <img src="https://cdnpt.com/images/1px.gif" alt="PriceTravel en Google +" class="goop mSprite" />
+         <img src="https://cdnpt.com/images/1px.gif" alt="PriceTravel en Twitter" class="tweet mSprite" />
+      </div>
+   </div>
+
+        <div id="Content">
+				  <div id="secTitle">
+				      <a onclick="backPage(); return false;" 
+				      href="https://www.pricetravel.com.mx/ayuda/cerrar-sesion" 
+				      title="Consultar otro itinerario">« 
+				      Consultar otro itinerario
+				      </a>
+				      <span class="fr"><a href="https://www.pricetravel.com.mx/ayuda//cerrar-sesion">Salir</a></span>
+				      <div class="group">
+				         <div class="fl"><h2>Localizador 1244882</h2></div>
+				         <p class="fr"><span class="light">Titular de la reservación: </span>Alfonso Mejía</p>
+				      </div>
+				   </div> 
+	   			<div id="helpleft">
+	      <div class="hotsidbar">
+	         <ul>
+	            <li>
+	               <a  href="#" title="Consulta tu reservación">
+	                  Itinerario
+	               </a>
+	            </li>
+	            <li>
+	               <a class="active" id="lnkInvoicing" href="#" title="Modificar reservación">
+	                  Facturación
+	               </a>
+	            </li>
+	            <li>
+	               <a  id="lnkChangeReservation" href="#" title="Modificar reservación">
+	                  Modificaciones
+	               </a>
+	            </li>
+	            <li>
+	               <a  id="lnkCancelReservation" href="#"   title="Cancelar reservación" >
+	                  Cancelaciones
+	               </a>
+	            </li>
+	            <li style="margin: 10px 0 0 0;">                            
+	               <a class="imptt" href="#" title="Regresar a Ayuda">Regresar a Ayuda </a>
+	            </li>
+	         </ul>
+	      </div> 
+	   </div>
+    				
+<div id="main" class="facturas">
+  
+<h3 class="pending">Pendientes de facturación</h3>
+<table class="pendientes">
+	<thead>
+		<tr>
+			<th>Item</th>
+			<th>Importe</th>
+			<th>Pagado</th>
+			<th>Facturado</th>
+			<th>Facturable</th>
+			<th>Moneda</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td> Habitación Hotel <span class="contador">1 de 3</span></td>
+			<td> 6,000.00</td>
+			<td> 6,000.00</td>
+			<td> 2,000.00</td>
+			<td> 4,000.00</td>
+			<td>MXN</td>
+			<td class="estado"> <span class="listo">listo para facturar</span></td>
+		</tr>
+		<tr>
+			<td> Habitación Hotel <span class="contador"> 2 de 3</span></td>
+			<td> 6,000.00</td>
+			<td> 6,000.00</td>
+			<td> 0.00</td>
+			<td> 6,000.00</td>
+			<td>MXN</td>
+			<td class="estado"> <span class="listo">listo para facturar</span></td>
+		</tr>
+		<tr>
+			<td> Habitación Hotel <span class="contador">3 de 3</span></td>
+			<td> 6,000.00</td>
+			<td> 2,000.00</td>
+			<td> 0.00</td>
+			<td class="disabled"> 0.00</td>
+			<td class="">MXN</td>
+			<td class="estado"> 
+				<a href="#" class="warntooltip">
+					<span class="texto">Factura no disponible</span>
+					<span class="caja">
+						<img class="callout" src="content/callout.gif" />
+						<strong>Saldo pendiente</strong><br/>
+						No es posible facturar un servicio <br/> con saldo pendiente.
+					</span></a>
+ 			</td>
+		</tr>
+		<tr >
+			<td> Paquete
+					<span class="item">Habitación hotel</span>
+					<span class="item">Vuelo redondo CUN-MTY</span>
+			</td>
+			<td> 12,000.00</td>
+			<td> 12,000.00</td>
+			<td> 0.00</td>
+			<td class="disabled"> 0.00</td>
+			<td class="">MXN</td>
+			<td class="estado"> 
+				<a href="#" class="warntooltip">
+					<span class="texto">Factura no disponible</span>
+					<span class="caja">
+						<img class="callout" src="content/callout.gif" />
+						<strong>Solicite al proveedor del servicio</strong><br/>
+						Favor de solicitar su factura al momento de recibir el servicio. Ver Políticas de facturación.
+					</span></a>
+				</td>
+		</tr>
+		<tr class="borderless">
+			<td colspan="4"></td>
+			<td class="bold">10,000.00</td>
+			<td>MXN</td>
+			<td><input type="button" name=""  class="botAzu" value="Solicitar facturas" /></td>
+		</tr>
+	</tbody>
+</table>
+
+
+<h3 class="done">Facturas emitidas</h3>
+
+<table class="emitidas">
+	<thead>
+		<tr>
+			<th class="center"> Folio</th>
+			<th> Facturado a</th>
+			<th> Emisión</th>
+			<th> Importe</th>
+			<th> Descargar </th>
+			<th> Enviar</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>D-3485</td>
+			<td> Apoyo al desarrollo mexicano S.C. <span class="smallcaps grey">ADM045613A4</span></td>
+			<td> 28 ENE 2014 <span class="hora">12:34 hrs</span></td>
+			<td> $2,000 mxn</td>
+			<td class="descarga">
+				<a href="#" title="Descargar en PDF"><img src="content/pdf.png" alt="" /></a>
+				<a href="#" title="Descargar en XML"><img src="content/xml.png" alt="" /></a>
+			</td>
+			<td>
+				<a href="#" title="Enviar al correo del titular de la reservación"><img src="content/mail.png" alt="" /></a>
+			</td>
+		</tr>
+		<tr>
+			<td>D-3485</td>
+			<td> Apoyo al desarrollo mexicano S.C. <span class="smallcaps grey">ADM045613A4</span></td>
+			<td> 28 ENE 2014 <span class="hora">12:34 hrs</span></td>
+			<td> $2,000 mxn</td>
+			<td class="descarga">
+				<a href="#" title="Descargar en PDF"><img src="content/pdf.png" alt="" /></a>
+				<a href="#" title="Descargar en XML"><img src="content/xml.png" alt="" /></a>
+			</td>
+			<td>
+				<a href="#" title="Enviar al correo del titular de la reservación"><img src="content/mail.png" alt="" /></a>
+			</td>
+		</tr>
+		<tr>
+			<td>D-3485</td>
+			<td> Apoyo al desarrollo mexicano S.C. <span class="smallcaps grey">ADM045613A4</span></td>
+			<td> 28 ENE 2014 <span class="hora">12:34 hrs</span></td>
+			<td> $2,000 mxn</td>
+			<td class="descarga">
+				<a href="#" title="Descargar en PDF"><img src="content/pdf.png" alt="" /></a>
+				<a href="#" title="Descargar en XML"><img src="content/xml.png" alt="" /></a>
+			</td>
+			<td>
+				<a href="#" title="Enviar al correo del titular de la reservación"><img src="content/mail.png" alt="" /></a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<div id="invoicelist">
+   
+<div id="InvoiceSentMessage" class="message success" style="display:none">
+      Se ha enviado la factura <strong id="NoInvoice"></strong> al email <strong id="InvoiceEmail"></strong>.
+   </div>
+
+</div>
+
+
+
+
+
+<div id='invoicepolicies'>
+	<h3 class="policy"><a id='invoicePoliciesLink' href='#'>Políticas de facturación</a></h3>
+	<ul id='invoicePoliciesList' style='visibility:hidden'>
+	   <li>Todas las facturas deberán ser solicitadas via web a través de este sitio de internet</li>
+	   <li>Puedes solicitar y obtener tu factura inmediatamente después de haber realizado un pago siempre y cuando tu reservación no esté en sistema de apartado. En caso de elegir apartado, podrás facturar una vez que hayas pagado el 100% de tu reservación.</li>
+	   <li>Tienes 60 días a partir de la fecha de pago para obtener tu factura o solicitar
+	      cambios</li>
+	   <li>Todos los cambios o cancelaciones de facturas deberán hacerse via telefónica al
+	      <strong>01 (800) 570-0988 </strong></li>
+	   <li>Los servicios de autobús se facturan directamente en la terminal, te recomendamos llegar 30 minutos antes de tu salida para evitar inconvenientes.</li>
+	</ul>
+</div>
+
+
+   </div>
+   <div id="rejected_info" style="position:absolute; width:290px; display:none;" onmouseout="javascript:hidePopupRejectedInfo();">
+      <div id="wraPop" style="width:115px;">
+         <div id="tabPop">Mas informaci&oacute;n</div>
+      </div>
+      <div id="detPop" style="width:320px; margin-left:160px;">
+         <div style="background:#fff; padding:10px;">
+            <p style="margin-bottom:7px;">El cargo a tu tarjeta no se pudo completar, por favor llámanos para que uno de nuestros agentes le de seguimiento a tu reservación:</p>
+            <p><li><span id="phoneTitle1"></span><br /><strong>01 (800) 570-0988</strong></li><li><span id="phoneTitle2"></span><br /><strong>1 (800) 231-9820</strong></li><li><span id="phoneTitle3"></span><br /><strong>+52 (998) 881-2485</strong></li>
+            </p>
+         </div>
+      </div>
+   </div>
+
+
+         </div>
+         <div class="clear"></div>
+         <div id="footer">
+         
+
+   <div class="fxwidth">
+      <div class="footerSection group">
+         <p><strong>MÉXICO:</strong> 
+         01 (800) 570-0988 | 
+         <strong>EE. UU. &AMP; CANADA:</strong> 1 (800) 231-9820 
+         | <strong>RESTO DEL MUNDO:</strong> +52 (998) 881-2485</p>
+      </div>
+   </div>
+
+         </div>
+      </div> 
+      <div id="Footer1_statisticsContainer"></div>
+   </div>
+
+   
+	 <script src="https://cdnpt.com/js/jquery/js/jquery-1.4.4.min.js" type="text/javascript"></script>
+   <script type="text/javascript">
+      var policiesVisible = false;
+      $(document).ready(function () {
+         $("#invoicePoliciesLink").click(function (e) {
+            e.preventDefault();
+            if (policiesVisible) {
+               policiesVisible = false;
+               $("#invoicePoliciesList").css("visibility", "hidden");
+            } else {
+               policiesVisible = true;
+               $("#invoicePoliciesList").css("visibility", "visible");
+            }
+         });
+
+         $(".sendEmailLink").click(function (e) {
+            e.preventDefault();
+            var urlLink = $(this).attr("href");
+
+            $.ajax({
+               url: urlLink,
+               type: "POST",
+               success: function (data) {
+                  if (data.sentInvoice) {
+                     $("#InvoiceSentMessage").css("display", "block");
+                     $("#NoInvoice").text(data.noInvoice);
+                     $("#InvoiceEmail").text(data.email);
+                  }
+               }
+            });
+            return false;
+         });
+
+      });   
+   </script>
+    
+</body>
+</html>
